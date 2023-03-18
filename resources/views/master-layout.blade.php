@@ -9,7 +9,6 @@
     <title>@yield('title')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
@@ -18,7 +17,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css" integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('css/nav-style.css') }}" />
 
 </head>
@@ -48,10 +49,10 @@
     <div class="overlay">
         <a class="close">&times;</a>
         <div class="overlay__content">
-            <a href=""><i class="fas fa-arrow-right"></i> Home</a>
-            <a href=""><i class="fas fa-arrow-right"></i> About</a>
-            <a href=""><i class="fas fa-newspaper"></i> Projects</a>
-            <a href=""><i class="fas fa-bullhorn"></i> Contacts</a>
+            <a href="{{ route('home') }}">Home</a>
+            <a href="{{ route('about') }}">About</a>
+            <a href="">Projects</a>
+            <a href="">Contacts</a>
         </div>
     </div>
     {{-- <header class="header-white">
@@ -81,6 +82,8 @@
                 <ul class="links d-flex my-3 gap-4 text-decoration-none list-unstyled">
                     <li><a href="https://www.linkedin.com/in/somerajoncyrel/" class="text-white-link-mod"
                             target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/cycycyyy" class="text-white-link-mod"
+                            target="_blank"><i class="mdi mdi-github"></i></a></li>
                     <li><a href="" class="text-white-link-mod"><i class="fab fa-instagram-square"
                                 target="_blank"></i></a></li>
                     <li><a href="" class="text-white-link-mod"><i class="fab fa-facebook-square"
@@ -96,80 +99,79 @@
 <script src="{{ URL::asset('js/nav-js.js') }}"></script>
 <script>
     let isHeaderWhite = false;
-let isTextWhiteLinkMod = false;
-let isMenuBlackMod = false;
-let isBrandLightImgLinkVisible = true;
+    let isTextWhiteLinkMod = false;
+    let isMenuBlackMod = false;
+    let isBrandLightImgLinkVisible = true;
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        if (!isHeaderWhite) {
-            $("header").fadeOut('fast', function() {
-                $(this).addClass('header-white');
-                $(this).removeClass('header-black');
-                $(this).fadeIn('fast');
-            });
-            isHeaderWhite = true;
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            if (!isHeaderWhite) {
+                $("header").fadeOut('fast', function() {
+                    $(this).addClass('header-white');
+                    $(this).removeClass('header-black');
+                    $(this).fadeIn('fast');
+                });
+                isHeaderWhite = true;
+            }
+            if (!isTextWhiteLinkMod) {
+                $(".nav-link").fadeOut('fast', function() {
+                    $(this).addClass('text-dark-link-mod');
+                    $(this).removeClass('text-white-link-mod');
+                    $(this).fadeIn('fast');
+                });
+                isTextWhiteLinkMod = true;
+            }
+            if (!isMenuBlackMod) {
+                $(".menu").fadeOut('fast', function() {
+                    $(this).addClass('text-black-mod');
+                    $(this).removeClass('text-white-mod');
+                    $(this).fadeIn('fast');
+                });
+                isMenuBlackMod = true;
+            }
+            if (isBrandLightImgLinkVisible) {
+                $(".brand-light-img-link").fadeOut('fast', function() {
+                    $(this).addClass('d-none');
+                    $(".brand-dark-img-link").removeClass('d-none');
+                    $(this).fadeIn('fast');
+                });
+                isBrandLightImgLinkVisible = false;
+            }
+        } else {
+            if (isHeaderWhite) {
+                $("header").fadeOut('fast', function() {
+                    $(this).removeClass('header-white');
+                    $(this).addClass('header-black');
+                    $(this).fadeIn('fast');
+                });
+                isHeaderWhite = false;
+            }
+            if (isTextWhiteLinkMod) {
+                $(".text-dark-link-mod").fadeOut('fast', function() {
+                    $(this).addClass('text-white-link-mod');
+                    $(this).removeClass('text-dark-link-mod');
+                    $(this).fadeIn('fast');
+                });
+                isTextWhiteLinkMod = false;
+            }
+            if (isMenuBlackMod) {
+                $(".menu").fadeOut('fast', function() {
+                    $(this).addClass('text-white-mod');
+                    $(this).removeClass('text-black-mod');
+                    $(this).fadeIn('fast');
+                });
+                isMenuBlackMod = false;
+            }
+            if (!isBrandLightImgLinkVisible) {
+                $(".brand-dark-img-link").fadeOut('fast', function() {
+                    $(this).addClass('d-none');
+                    $(".brand-light-img-link").removeClass('d-none');
+                    $(this).fadeIn('fast');
+                });
+                isBrandLightImgLinkVisible = true;
+            }
         }
-        if (!isTextWhiteLinkMod) {
-            $(".nav-link").fadeOut('fast', function() {
-                $(this).addClass('text-dark-link-mod');
-                $(this).removeClass('text-white-link-mod');
-                $(this).fadeIn('fast');
-            });
-            isTextWhiteLinkMod = true;
-        }
-        if (!isMenuBlackMod) {
-            $(".menu").fadeOut('fast', function() {
-                $(this).addClass('text-black-mod');
-                $(this).removeClass('text-white-mod');
-                $(this).fadeIn('fast');
-            });
-            isMenuBlackMod = true;
-        }
-        if (isBrandLightImgLinkVisible) {
-            $(".brand-light-img-link").fadeOut('fast', function() {
-                $(this).addClass('d-none');
-                $(".brand-dark-img-link").removeClass('d-none');
-                $(this).fadeIn('fast');
-            });
-            isBrandLightImgLinkVisible = false;
-        }
-    } else {
-        if (isHeaderWhite) {
-            $("header").fadeOut('fast', function() {
-                $(this).removeClass('header-white');
-                $(this).addClass('header-black');
-                $(this).fadeIn('fast');
-            });
-            isHeaderWhite = false;
-        }
-        if (isTextWhiteLinkMod) {
-            $(".text-dark-link-mod").fadeOut('fast', function() {
-                $(this).addClass('text-white-link-mod');
-                $(this).removeClass('text-dark-link-mod');
-                $(this).fadeIn('fast');
-            });
-            isTextWhiteLinkMod = false;
-        }
-        if (isMenuBlackMod) {
-            $(".menu").fadeOut('fast', function() {
-                $(this).addClass('text-white-mod');
-                $(this).removeClass('text-black-mod');
-                $(this).fadeIn('fast');
-            });
-            isMenuBlackMod = false;
-        }
-        if (!isBrandLightImgLinkVisible) {
-            $(".brand-dark-img-link").fadeOut('fast', function() {
-                $(this).addClass('d-none');
-                $(".brand-light-img-link").removeClass('d-none');
-                $(this).fadeIn('fast');
-            });
-            isBrandLightImgLinkVisible = true;
-        }
-    }
-});
-
+    });
 </script>
 <script>
     var lightbox = GLightbox({
