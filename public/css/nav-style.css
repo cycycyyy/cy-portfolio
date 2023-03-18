@@ -1,0 +1,118 @@
+.overlay__content a {
+   font-size: 11px;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   font-weight: bolder;
+   color: #718238;
+   text-decoration: none;
+   text-align: center;
+ }
+
+ .cta {
+   cursor: pointer;
+   font-size: 15px;
+   transition: background-color 0.3s ease 0s;
+   text-align: center;
+ }
+
+ .cta:hover {
+   cursor: pointer;
+ }
+
+ .cta i:hover {
+   cursor: pointer;
+ }
+
+ /* Mobile Nav */
+
+ .menu {
+   display: none;
+ }
+
+ .overlay {
+   height: 100%;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   background-color: #F4F4F4;
+   overflow-x: hidden;
+   transition: width 0.5s ease 0s;
+ }
+
+ .overlay--active {
+   width: 100%;
+ }
+
+ .overlay__content {
+   display: flex;
+   height: 100%;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .overlay a {
+   padding: 15px;
+   font-size: 20px;
+   display: block;
+   transition: color 0.3s ease 0s;
+ }
+
+ .overlay a:hover,
+ .overlay a:focus {
+   color: #232323;
+ }
+
+ .overlay .close {
+   position: absolute;
+   top: 20px;
+   right: 45px;
+   font-size: 60px;
+   color: #718238;
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+ @media only screen and (max-width: 768px) {
+
+  .menu {
+    display: initial;
+  }
+}
+
+ /* @media screen and (max-height: 450px) {
+ }
+
+ @media only screen and (max-width: 1360px) {
+
+   .nav__links,
+   .cta {
+     display: none;
+     border: none;
+   }
+
+   .menu {
+     font-size: 22px;
+     text-align: center;
+     border-radius: 5px;
+     display: initial;
+   }
+
+   .menu:hover {
+     background-color: white;
+     color: #E69B9B;
+   }
+
+   .link-wrapper {
+     display: none;
+   }
+ } */
+
+ /* @media only screen and (max-width: 750px) {
+
+   header-nav {
+     padding: 15px 10%;
+   }
+ } */
