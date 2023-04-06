@@ -2,7 +2,7 @@
 @section('content')
 @section('title', 'cy. | Home')
 
-<div class="header-message container">
+<div class="header-message container mt-4">
     <div class="d-lg-flex gap-4 align-items-center">
         <div class="" style="width: 100%; height: 60vh;">
             <img src="{{ URL::asset('imgs/Portrait-1.jpg') }}" alt="" class="portrait-1 img-cover">

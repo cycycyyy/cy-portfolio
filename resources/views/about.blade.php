@@ -7,7 +7,7 @@
         <span class="display-4 text-white-mod px-3">About <strong style="font-weight: 700;">Cy.</strong></span>
     </div>
     <div class="d-md-flex flex-row-reverse justify-content-between align-items-center py-5 gap-3">
-        <div class="w-100 w-md-50" style="height: 60vh;">
+        <div class="w-100 w-md-50" style="height: 70vh;">
             <img src="{{ URL::asset('imgs/Portrait-2.jpg') }}" alt=""
                 class="img-cover" style="border-top: 3px solid #718238;">
         </div>
@@ -28,6 +28,25 @@
         <div class="d-flex align-items-center justify-content-between px-4 gap-3">
             <span class="text-green h3" style="font-weight: 700;">Check my CV?</span>
             <button class="btn btn-warning" id="download-cv"><i class="mdi mdi-download"></i> Download here</button>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-light-mod">
+    <div class="container my-5 py-5">
+        <div class="row flex-row-reverse">
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <span class="display-4" style="text-align: right"><i class="fas fa-code-branch"></i> Technologies I learned</span>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <ul>
+                    <li><span>PHP</span></li>
+                    <li><span>Basic HTML + CSS + JS</span></li>
+                    <li><span>Bootstrap</span></li>
+                    <li><span>Laravel</span></li>
+                    <li><span>Adobe Creative Suites</span></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
