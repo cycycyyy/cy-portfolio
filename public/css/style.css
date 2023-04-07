@@ -6,7 +6,6 @@
 #F4F4F4 - White/Light
 #718238 - Contrast/Moss Green */
 
-/* Optionally, you can set different font weights for different elements */
 h1, h2, h3 {
     font-weight: 600;
 }
@@ -15,7 +14,6 @@ body {
     background-color: #232323;
     font-family: 'Manrope', sans-serif;
     font-weight: 400;
-    /* Set the default font weight */
 }
 
 header {
@@ -175,7 +173,7 @@ footer {
     padding: 80px 0 80px;
 }
 
-.cv-wrapper{
-    border-radius: 10px;;
+.cv-wrapper {
+    border-radius: 10px;
+    ;
 }
-
