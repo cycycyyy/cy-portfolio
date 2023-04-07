@@ -7,7 +7,7 @@
         <span class="display-4 text-white-mod px-3">About <strong style="font-weight: 700;">Cy.</strong></span>
     </div>
     <div class="d-md-flex flex-row-reverse justify-content-between align-items-center py-5 gap-3">
-        <div class="w-100 w-md-50" style="height: 60vh;">
+        <div class="w-100 w-md-50" style="height: 70vh;">
             <img src="{{ URL::asset('imgs/Portrait-2.jpg') }}" alt=""
                 class="img-cover" style="border-top: 3px solid #718238;">
         </div>
@@ -31,6 +31,8 @@
         </div>
     </div>
 </div>
+
+@include('sections.technologies')
 
 <script>
 document.getElementById("download-cv").addEventListener("click", downloadFile);

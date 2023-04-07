@@ -2,13 +2,14 @@
 @section('content')
 @section('title', 'cy. | Home')
 
-<div class="header-message container">
+<div class="header-message container mt-4">
     <div class="d-lg-flex gap-4 align-items-center">
         <div class="" style="width: 100%; height: 60vh;">
             <img src="{{ URL::asset('imgs/Portrait-1.jpg') }}" alt="" class="portrait-1 img-cover">
         </div>
         <div class="p-4">
-            <h1 class="display-2" style="color:#718238;"><span class="typed-text"></span><span class="cursor">&nbsp;</span>
+            <h1 class="display-2" style="color:#718238;"><span class="typed-text"></span><span
+                    class="cursor">&nbsp;</span>
             </h1>
             <h2 class="display-4">I'm Jon Cyrel.</h2>
             <h3 class="display-6">A Manila-based graphic designer specializing in product development, marketing
@@ -41,9 +42,42 @@
                             <h5 class="text-green-bold">BabyMo: Online Pediatric Immunization Monitoring and Scheduling
                                 System</h5>
                             <span>Accountable for implementing front-end solutions and producing user-centered design
-                                concepts for the enhancement of user interface elements and overall user experience</span>
+                                concepts for the enhancement of user interface elements and overall user
+                                experience</span>
                         </div>
-                        <button onclick="window.open('https://babymo-vaccinate.com/')" class="btn btn-sm bg-green text-light my-2 hover-darken"><i class="fas fa-link"></i> Visit Link</button>
+                        <button onclick="window.open('https://babymo-vaccinate.com/')"
+                            class="btn btn-sm bg-green text-light my-2 hover-darken"><i class="fas fa-link"></i> Visit
+                            Link</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card my-3">
+                    <div class="card-body">
+                        <div class="card-img-holder hover-darken">
+                            <a href="{{ URL::asset('imgs/projects/BabyMo-MarketingVid.jpg') }}" class="glightbox">
+                                <img src="{{ URL::asset('imgs/projects/BabyMo-MarketingVid.jpg') }}" alt=""
+                                    class="img-cover">
+                            </a>
+                        </div>
+                        <div class="">
+                            <span class="badge bg-warning my-2">Marketing Collateral</span>
+                            <span class="badge bg-danger my-2">Video Editing</span>
+                        </div>
+                        <div class="">
+                            <h5 class="text-green-bold">BabyMo Promotional Video</h5>
+                            <span>It is a promotional video for BabyMo, showing the highlights and importance of the
+                                website
+                                features.</span>
+                        </div>
+                        <button class="popup-btn">click me</button>
+
+                        
+                        {{-- <a href="https://www.youtube.com/embed/yPRcuVOhP-k"
+                            class="btn bg-green hover-darken text-light popup-youtube">View Video</a> --}}
+                        {{-- <button type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            class="btn btn-sm bg-green text-light my-2 hover-darken"><i class="fas fa-eye"></i> View
+                            Video</button> --}}
                     </div>
                 </div>
             </div>
@@ -80,11 +114,46 @@
                         <span>Mockup for BabyMo's Website Demo Launch</span>
                     </div>
                 </div>
+            </div>
+            <div class="view-all-button d-flex justify-content-center my-4">
+                <button class="btn bg-green text-light hover-darken">
+                    <i class="fas fa-eye"></i> View All Projects
+                </button>
             </div>
         </div>
     </div>
 </section>
 
+
+<div class="video-popup">
+    <div class="popup-bg"></div>
+    <div class="popup-content">
+        <!--         <p class="popup-title">Youtube</p> -->
+        <iframe src="https://www.youtube.com/embed/yPRcuVOhP-k?autoplay=0" class="video"></iframe>
+    </div>
+</div>
+@include('sections.technologies')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.popup-btn').on('click', function() {
+            $('.video-popup').fadeIn('slow');
+            return false;
+        });
+
+        $('.popup-bg').on('click', function() {
+            $('.video-popup').slideUp('slow');
+            return false;
+        });
+
+        $('.close-btn').on('click', function() {
+            $('.video-popup').fadeOut('slow');
+            return false;
+        });
+
+    });
+</script>
 <script>
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
