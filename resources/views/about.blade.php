@@ -32,24 +32,7 @@
     </div>
 </div>
 
-<div class="container-fluid bg-light-mod">
-    <div class="container my-5 py-5">
-        <div class="row flex-row-reverse">
-            <div class="col-md-6 d-flex align-items-center justify-content-center">
-                <span class="display-4" style="text-align: right"><i class="fas fa-code-branch"></i> Technologies I learned</span>
-            </div>
-            <div class="col-md-6 d-flex align-items-center">
-                <ul>
-                    <li><span>PHP</span></li>
-                    <li><span>Basic HTML + CSS + JS</span></li>
-                    <li><span>Bootstrap</span></li>
-                    <li><span>Laravel</span></li>
-                    <li><span>Adobe Creative Suites</span></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+@include('sections.technologies')
 
 <script>
 document.getElementById("download-cv").addEventListener("click", downloadFile);

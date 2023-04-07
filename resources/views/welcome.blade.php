@@ -8,7 +8,8 @@
             <img src="{{ URL::asset('imgs/Portrait-1.jpg') }}" alt="" class="portrait-1 img-cover">
         </div>
         <div class="p-4">
-            <h1 class="display-2" style="color:#718238;"><span class="typed-text"></span><span class="cursor">&nbsp;</span>
+            <h1 class="display-2" style="color:#718238;"><span class="typed-text"></span><span
+                    class="cursor">&nbsp;</span>
             </h1>
             <h2 class="display-4">I'm Jon Cyrel.</h2>
             <h3 class="display-6">A Manila-based graphic designer specializing in product development, marketing
@@ -18,6 +19,19 @@
     </div>
 </div>
 
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">    
+                <button type="button" class="btn bg-green text-light close" data-bs-dismiss="modal">&times;</button>
+                <div class="video-cover" style="">
+                    <iframe style="width: 100%;" height="100%" src="https://www.youtube.com/embed/yPRcuVOhP-k" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <section id="projects-section" class="p-3">
     <div class="container">
         <div class="section-title my-4">
@@ -41,9 +55,36 @@
                             <h5 class="text-green-bold">BabyMo: Online Pediatric Immunization Monitoring and Scheduling
                                 System</h5>
                             <span>Accountable for implementing front-end solutions and producing user-centered design
-                                concepts for the enhancement of user interface elements and overall user experience</span>
+                                concepts for the enhancement of user interface elements and overall user
+                                experience</span>
                         </div>
-                        <button onclick="window.open('https://babymo-vaccinate.com/')" class="btn btn-sm bg-green text-light my-2 hover-darken"><i class="fas fa-link"></i> Visit Link</button>
+                        <button onclick="window.open('https://babymo-vaccinate.com/')"
+                            class="btn btn-sm bg-green text-light my-2 hover-darken"><i class="fas fa-link"></i> Visit
+                            Link</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card my-3">
+                    <div class="card-body">
+                        <div class="card-img-holder hover-darken">
+                            <a href="{{ URL::asset('imgs/projects/BabyMo-Tarp-3.jpg') }}" class="glightbox">
+                                <img src="{{ URL::asset('imgs/projects/BabyMo-Tarp-3.jpg') }}" alt=""
+                                    class="img-cover">
+                            </a>
+                        </div>
+                        <div class="">
+                            <span class="badge bg-warning my-2">Marketing Collateral</span>
+                            <span class="badge bg-danger my-2">Video Editing</span>
+                        </div>
+                        <div class="">
+                            <h5 class="text-green-bold">BabyMo Promotional Video</h5>
+                            <span>It is a promotional video for BabyMo, showing the highlights and importance of the website
+                                features.</span>
+                        </div>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            class="btn btn-sm bg-green text-light my-2 hover-darken"><i class="fas fa-eye"></i> View
+                            Video</button>
                     </div>
                 </div>
             </div>
@@ -80,10 +121,18 @@
                         <span>Mockup for BabyMo's Website Demo Launch</span>
                     </div>
                 </div>
+            </div>
+            <div class="view-all-button d-flex justify-content-center my-4">
+                <button class="btn bg-green text-light hover-darken">
+                    <i class="fas fa-eye"></i> View All Projects
+                </button>
             </div>
         </div>
     </div>
 </section>
+
+
+@include('sections.technologies')
 
 <script>
     const typedTextSpan = document.querySelector(".typed-text");
