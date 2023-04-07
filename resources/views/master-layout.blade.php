@@ -38,8 +38,8 @@
                     <ul class="links d-flex gap-4 text-decoration-none list-unstyled">
                         <li><a href="{{ route('home') }}" class="nav-link text-white-link-mod">Home</a></li>
                         <li><a href="{{ route('about') }}" class="nav-link text-white-link-mod">About</a></li>
-                        <li><a href="" class=" nav-link text-white-link-mod">Projects</a></li>
-                        <li><a href="" class=" nav-link text-white-link-mod">Contacts</a></li>
+                        <li><a href="{{ route('projects') }}" class=" nav-link text-white-link-mod">Projects</a></li>
+                        <li><a href="{{ route('contacts') }}" class=" nav-link text-white-link-mod">Contacts</a></li>
                     </ul>
                 </div>
                 <p class="menu d-md-none cta text-white-mod" style="letter-spacing: 2px;">MENU</p>
@@ -51,8 +51,8 @@
         <div class="overlay__content">
             <a href="{{ route('home') }}">Home</a>
             <a href="{{ route('about') }}">About</a>
-            <a href="">Projects</a>
-            <a href="">Contacts</a>
+            <a href="{{ route('projects') }}">Projects</a>
+            <a href="{{ route('contacts') }}">Contacts</a>
         </div>
     </div>
     {{-- <header class="header-white">

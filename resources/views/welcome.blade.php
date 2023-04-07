@@ -63,6 +63,8 @@
                                 concepts for the enhancement of user interface elements and overall user
                                 experience</span>
                         </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-end">
                         <button onclick="window.open('https://babymo-vaccinate.com/')"
                             class="btn btn-sm bg-green text-light my-2 hover-darken"><i class="fas fa-link"></i> Visit
                             Link</button>
@@ -88,7 +90,9 @@
                                 website
                                 features.</span>
                         </div>
+                    </div>
 
+                    <div class="card-footer d-flex justify-content-end">
                         <button type="button" data-bs-toggle="modal" data-bs-target="#videoModal"
                             class="btn btn-sm bg-green text-light my-2 hover-darken"><i class="fas fa-eye"></i> View
                             Video</button>
@@ -130,7 +134,7 @@
                 </div>
             </div>
             <div class="view-all-button d-flex justify-content-center my-4">
-                <button class="btn bg-green text-light hover-darken">
+                <button class="btn bg-green text-light hover-darken" onclick="window.open('{{ route('projects') }}')" >
                     <i class="fas fa-eye"></i> View All Projects
                 </button>
             </div>
