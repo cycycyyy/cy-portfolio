@@ -19,19 +19,6 @@
     </div>
 </div>
 
-<div class="modal fade" id="myModal">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-body">    
-                <button type="button" class="btn bg-green text-light close" data-bs-dismiss="modal">&times;</button>
-                <div class="video-cover" style="">
-                    <iframe style="width: 100%;" height="100%" src="https://www.youtube.com/embed/yPRcuVOhP-k" frameborder="0"
-                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <section id="projects-section" class="p-3">
     <div class="container">
         <div class="section-title my-4">
@@ -68,8 +55,8 @@
                 <div class="card my-3">
                     <div class="card-body">
                         <div class="card-img-holder hover-darken">
-                            <a href="{{ URL::asset('imgs/projects/BabyMo-Tarp-3.jpg') }}" class="glightbox">
-                                <img src="{{ URL::asset('imgs/projects/BabyMo-Tarp-3.jpg') }}" alt=""
+                            <a href="{{ URL::asset('imgs/projects/BabyMo-MarketingVid.jpg') }}" class="glightbox">
+                                <img src="{{ URL::asset('imgs/projects/BabyMo-MarketingVid.jpg') }}" alt=""
                                     class="img-cover">
                             </a>
                         </div>
@@ -79,12 +66,18 @@
                         </div>
                         <div class="">
                             <h5 class="text-green-bold">BabyMo Promotional Video</h5>
-                            <span>It is a promotional video for BabyMo, showing the highlights and importance of the website
+                            <span>It is a promotional video for BabyMo, showing the highlights and importance of the
+                                website
                                 features.</span>
                         </div>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                        <button class="popup-btn">click me</button>
+
+                        
+                        {{-- <a href="https://www.youtube.com/embed/yPRcuVOhP-k"
+                            class="btn bg-green hover-darken text-light popup-youtube">View Video</a> --}}
+                        {{-- <button type="button" data-bs-toggle="modal" data-bs-target="#myModal"
                             class="btn btn-sm bg-green text-light my-2 hover-darken"><i class="fas fa-eye"></i> View
-                            Video</button>
+                            Video</button> --}}
                     </div>
                 </div>
             </div>
@@ -132,8 +125,35 @@
 </section>
 
 
+<div class="video-popup">
+    <div class="popup-bg"></div>
+    <div class="popup-content">
+        <!--         <p class="popup-title">Youtube</p> -->
+        <iframe src="https://www.youtube.com/embed/yPRcuVOhP-k?autoplay=0" class="video"></iframe>
+    </div>
+</div>
 @include('sections.technologies')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
 
+        $('.popup-btn').on('click', function() {
+            $('.video-popup').fadeIn('slow');
+            return false;
+        });
+
+        $('.popup-bg').on('click', function() {
+            $('.video-popup').slideUp('slow');
+            return false;
+        });
+
+        $('.close-btn').on('click', function() {
+            $('.video-popup').fadeOut('slow');
+            return false;
+        });
+
+    });
+</script>
 <script>
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
