@@ -9,7 +9,7 @@
     </div>
     <div class="text-white-mod text-center">
         <h1>Under Construction</h1>
-        <p>Working on something awesome and will be back soon!</p>
+        <p>Working on something awesome and will be back soon! Thank you!</p>
     </div>
 </div>
 
