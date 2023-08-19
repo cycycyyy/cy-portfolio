@@ -16,8 +16,11 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css" integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
+        integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('css/nav-style.css') }}" />
     <link rel="stylesheet" href="{{ URL::asset('css/magnific-popup.css') }}" />
@@ -78,12 +81,15 @@
         <div class="container">
             <div class="d-md-flex align-items-center justify-content-between footer-content">
                 <img src="{{ URL::asset('imgs/Logo-White.png') }}" class="brand-img my-3 p-sm-3" alt="">
-                <span class="text-white my-3 p-sm-3">Copyright © {{ date('Y') }}</span>
+                <div class="row">
+                    <span class="text-white my-3 p-sm-3">Copyright © {{ date('Y') }}</span>
+                    <span>Made by <strong>Jon Cyrel Somera</strong></span>
+                </div>
                 <ul class="links d-flex my-3 gap-4 text-decoration-none list-unstyled">
                     <li><a href="https://www.linkedin.com/in/somerajoncyrel/" class="text-white-link-mod"
                             target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/cycycyyy" class="text-white-link-mod"
-                            target="_blank"><i class="mdi mdi-github"></i></a></li>
+                    <li><a href="https://github.com/cycycyyy" class="text-white-link-mod" target="_blank"><i
+                                class="mdi mdi-github"></i></a></li>
                     <li><a href="" class="text-white-link-mod"><i class="fab fa-instagram-square"
                                 target="_blank"></i></a></li>
                     <li><a href="" class="text-white-link-mod"><i class="fab fa-facebook-square"

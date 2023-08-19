@@ -116,23 +116,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="card my-3">
-                    <div class="card-body">
-                        <div class="card-img-holder hover-darken">
-                            <a href="{{ URL::asset('imgs/projects/BabyMo-Tarp-3.jpg') }}" class="glightbox">
-                                <img src="{{ URL::asset('imgs/projects/BabyMo-Tarp-3.jpg') }}" alt=""
-                                    class="img-cover">
-                            </a>
-                        </div>
-                        <div class="">
-                            <span class="badge bg-warning my-2">Marketing Collateral</span>
-                        </div>
-                        <h5 class="text-green-bold">BabyMo Tarpaulin Signages Mockup</h5>
-                        <span>Mockup for BabyMo's Website Demo Launch</span>
-                    </div>
-                </div>
-            </div>
             <div class="view-all-button d-flex justify-content-center my-4">
                 <button class="btn bg-green text-light hover-darken" onclick="window.open('{{ route('projects') }}')" >
                     <i class="fas fa-eye"></i> View All Projects
