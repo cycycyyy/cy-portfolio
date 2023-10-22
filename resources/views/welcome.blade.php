@@ -61,7 +61,7 @@
                                 System</h5>
                             <span>Accountable for implementing front-end solutions and producing user-centered design
                                 concepts for the enhancement of user interface elements and overall user
-                                experience.</span>
+                                experience</span>
                         </div>
                     </div>
                     <div class="card-footer d-flex justify-content-end">
