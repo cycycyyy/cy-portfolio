@@ -112,7 +112,7 @@
                             <span class="badge bg-warning my-2">Marketing Collateral</span>
                         </div>
                         <h5 class="text-green-bold">BabyMo Tarpaulin Signages Mockup</h5>
-                        <span>Mockup for BabyMo's Website Demo</span>
+                        <span>Mockup for BabyMo's Website Demo Launch</span>
                     </div>
                 </div>
             </div>
