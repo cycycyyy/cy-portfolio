@@ -81,8 +81,8 @@
         <div class="container">
             <div class="d-md-flex align-items-center justify-content-between footer-content">
                 <img src="{{ URL::asset('imgs/Logo-White.png') }}" class="brand-img my-3 p-sm-3" alt="">
-                <div class="row">
-                    <span class="text-white my-3 p-sm-3">Copyright © {{ date('Y') }}</span>
+                <div class="row text-white text-md-center mb-3">
+                    <span class="my-3 p-sm-3">Copyright © {{ date('Y') }}</span>
                     <span>Made by <strong>Jon Cyrel Somera</strong></span>
                 </div>
                 <ul class="links d-flex my-3 gap-4 text-decoration-none list-unstyled">
